@@ -31,17 +31,20 @@
   margin: auto;
   max-width: 50%;
   font-size: 1.25em;
+  font-weight: bold;
   text-align: center;
   padding-top: 15px;
 }
 
 .temp {
   margin: auto;
-  max-width: 25%;
+  max-width: 50%;
   font-size: 1.25em;
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 10px;
+  font-weight: bold;
 }
 ottom: 10px;
+}
+tom: 10px;
 }
