@@ -9,6 +9,12 @@ var main = function(){
   var formattedCityState;
   var domLocation = document.getElementById("cityLocation");
   var units;
+  var currentFahrenheitTemp;
+  var currentCelsiusTemp;
+  var highFahrenheitTemp;
+  var highCelsiusTemp;
+  var lowFahrenheitTemp;
+  var lowCelsiusTemp;
 
   var getWeather = function(){
     units = "&units=imperial";
@@ -19,9 +25,12 @@ var main = function(){
       contentType: "application/json",
       dataType: 'jsonp',
       success: function(data) {
+        currentFahrenheitTemp = Math.floor(Math.round(data.main.temp));
+        highFahrenheitTemp = Math.floor(Math.round(data.main.temp_max));
+        lowFahrenheitTemp = Math.floor(Math.round(data.main.temp_min));
         $('.pageHeader').text('Local Weather');
         $('.conditions').html('Currently in ' + city +': ' + data.weather[0].main);
-        $('.temp').html('Current ' + Math.floor(Math.round(data.main.temp)) + '<p> Today\'s High ' + Math.floor(Math.round(data.main.temp_max)) + ' </p>' + '<p> Today\'s Low ' + Math.floor(Math.round(data.main.temp_min)) + ' </p>');
+        $('.temp').html('Current ' + currentFahrenheitTemp + '<p> Today\'s High ' + highFahrenheitTemp + ' </p>' + '<p> Today\'s Low ' + lowFahrenheitTemp + ' </p>');
         return;
       },
       error: function(jqXHR, textStatus, errorThrown) {
