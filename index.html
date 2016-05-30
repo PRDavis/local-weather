@@ -8,27 +8,21 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="page">
+    <header>
+      <p class ="pageHeader">Local Weather</p>
+    </header>
+    <section class="conditions"></section>
+    <section class="temp"></section>
+    <div class="map">
+      <div id="map"></div>
 
-  <header>
-    <h1>Local Weather</h1>
-  </header>
-  <div id="map"></div>
-  <section class="city" id="cityLocation">
-    Here is your city
-  
-  </section>
-  <section class="temp">
-    Here is your temperature
-  </section>
-  <section class="conditions">
-    Here are your conditions
-    Here is an icon depicting your condtions
-  </section>
-
-
-  <script src="js/jquery-1.12.3.min.js"></script>
-  <script src="js/app.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKeufMxxHn97jgPnscgx38LBN0mRNSf3o&callback=init" onerror="mapAPILoadFailed" async defer></script>
-
+    </div>
+    <section class="city" id="cityLocation">
+    </section>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKeufMxxHn97jgPnscgx38LBN0mRNSf3o&callback=init" onerror="mapAPILoadFailed" async defer></script>
+  </div>
 </body>
 </html>
