@@ -97,7 +97,7 @@ var getLocation = function(){
   }
   // if geolocation fails
   function error(){
-    console.log('can not find you');
+    console.log('can not find you ' + error.code);
   }
 };
 // get the geolocation from the browser
