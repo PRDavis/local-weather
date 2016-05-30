@@ -24,7 +24,6 @@
   text-align: center;
   padding-top: 15px;
   margin-bottom: 10px;
-  border: 1px solid red;
   font-weight: bold;
 }
 
@@ -43,4 +42,6 @@
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+ottom: 10px;
 }
